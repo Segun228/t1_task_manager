@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    text-align: center;
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 2rem;
+}
+
+.code {
+    font-size: 6rem;
+    font-weight: 800;
+    color: #ff4c4c;
+    margin: 0;
+}
+
+.message {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.link {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: #0f0f0f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.link:hover {
+    background-color: #e2e2e2;
+}
