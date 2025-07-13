@@ -1,0 +1,99 @@
+:root {
+    --modal-padding: 2rem;
+    --modal-radius: 16px;
+    --modal-bg: #ffffff;
+    --modal-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --cancel-color: #777;
+    --danger-color: #d9363e;
+}
+
+/* затемнение и блюр фона */
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(3px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* обёртка модалки */
+.wrapper {
+    position: relative;
+    background-color: var(--modal-bg);
+    border-radius: var(--modal-radius);
+    padding: var(--modal-padding);
+    box-shadow: var(--modal-shadow);
+    z-index: 1000;
+    width: 100%;
+    max-width: 600px;
+    animation: slideUp 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* крестик закрытия */
+.cancel {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: var(--cancel-color);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cancel:hover {
+    transform: scale(1.2);
+}
+
+/* заголовок модалки */
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ошибка */
+.error {
+    color: var(--danger-color);
+    text-align: center;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* адаптивность */
+@media (max-width: 768px) {
+    .wrapper {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+
+    .title {
+        font-size: 1.25rem;
+    }
+
+    .cancel {
+        font-size: 1.25rem;
+    }
+}

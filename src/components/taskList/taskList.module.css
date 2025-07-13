@@ -1,0 +1,10 @@
+.taskContainer {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    align-items: start;
+    width: 100%;
+    box-sizing: border-box;
+}

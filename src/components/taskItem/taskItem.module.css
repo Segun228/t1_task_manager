@@ -1,0 +1,25 @@
+.card{
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.card:hover{
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+}
+
+.card {
+    width: 100%;
+    max-width: 360px;
+    height: stretch;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
