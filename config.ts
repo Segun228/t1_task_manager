@@ -1,1 +1,1 @@
-export const BACKEND:string = "/public/dummy.json"
+export const BASE_URL:string = "/public/dummy.json"
