@@ -1,8 +1,8 @@
 import type {FC} from "react";
-import styles from "./homePage.module.css"
+import styles from "./taskList.module.css"
 
 
-const HomePage: FC = () => {
+const TaskList: FC = () => {
     return (
     <>
         <div>home</div>
@@ -11,4 +11,4 @@ const HomePage: FC = () => {
 }
 
 
-export default HomePage;
+export default TaskList;

@@ -1,0 +1,1 @@
+export const BACKEND:string = "/public/dummy.json"
