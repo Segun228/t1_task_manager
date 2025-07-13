@@ -1,69 +1,83 @@
-# React + TypeScript + Vite
+# 📝 Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Task Manager** — веб-приложение для управления IT-задачами. Пользователь может просматривать список задач, редактировать их и видеть подробную информацию по каждой.
 
-Currently, two official plugins are available:
+## 🎯 Цель
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Создание приложения "Менеджер задач" на **React + TypeScript**, с использованием актуального UI-фреймворка и современного состояния хранилища.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Используемые технологии
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React 19** — библиотека для построения пользовательских интерфейсов
+- **TypeScript** — строгая типизация
+- **Redux Toolkit** — глобальное хранилище состояния
+- **Ant Design** — UI-компоненты
+- **React Router DOM (v7)** — маршрутизация
+- **Axios** — HTTP-клиент
+- **Redux Persist** — сохранение состояния в `localStorage`
+- **React Icons** — иконки
+- **Lenis** — плавный скролл
+- **CSS Modules** — стилизация
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📁 Структура проекта
+
+.
+├── public/
+│   └── dummy.json         # JSON-данные (заглушки)
+├── src/
+│   ├── assets/            # Статичные ассеты
+│   ├── components/        # Переиспользуемые компоненты UI
+│   │   ├── createModal/
+│   │   ├── editTaskField/
+│   │   ├── taskItem/
+│   │   └── …
+│   ├── helpers/           # Утилиты/вспомогательные функции
+│   ├── hooks/             # Кастомные React-хуки
+│   ├── pages/             # Отдельные страницы
+│   │   ├── homePage/
+│   │   ├── taskPage/
+│   │   └── notFoundPage/
+│   ├── queries/           # Работа с API (get, create, edit, delete)
+│   ├── store/             # Redux slices
+│   ├── types/             # Общие типы
+│   ├── App.tsx            # Главный компонент
+│   ├── main.tsx           # Точка входа
+│   └── zero.css           # Сброс стилей
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+---
+
+## 🧠 Функциональность
+
+- Просмотр списка задач
+- Фильтрация по категориям (Bug, Feature, Test...)
+- Просмотр детальной информации
+- Редактирование задачи (через модальное окно или страницу)
+- Использование глобального состояния (Redux)
+
+---
+
+## 📦 Установка и запуск
+
+```bash
+# Установка зависимостей
+npm install
+
+# Запуск локального сервера
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Приложение будет доступно по адресу: http://localhost:5173
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧾 Лицензия
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+MIT — используй свободно.
+
+
