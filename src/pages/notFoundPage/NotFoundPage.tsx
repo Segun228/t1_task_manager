@@ -7,7 +7,7 @@ const NotFoundPage: FC = () => {
         <div className={styles.container}>
         <h1 className={styles.code}>404</h1>
         <p className={styles.message}>Страница не найдена</p>
-        <Link to="/" className={styles.link}>
+        <Link to="/" className={styles.link} style={{color:"black"}}>
             Вернуться на главную
         </Link>
         </div>
