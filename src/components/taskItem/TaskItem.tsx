@@ -47,11 +47,9 @@ const TaskItem: FC<TaskItemProps> = ({ data }) => {
     };
 
 
-const handleDelete = (e: MouseEvent<HTMLButtonElement>) => {
+const handleDelete = (e: MouseEvent<HTMLSpanElement>) => {
     e.stopPropagation();
-
     dispatch(deleteTask(data?.id));
-
     navigate("/");
 };
 

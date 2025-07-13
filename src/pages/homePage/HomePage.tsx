@@ -37,6 +37,7 @@ const HomePage: FC = () => {
 
 
         <div className={styles.wrapper}>
+            <div className={styles.header}>Task manager</div>
             <div className={styles.subcont}>
                 <h1>Create task</h1>
                 <ActionButton onClick={()=>{setOpen(true)}}>Create</ActionButton>
